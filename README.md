@@ -21,9 +21,9 @@ should be set an appropriate value. If the cell size varies, we should use diffe
 * data block
 
 # java socket
-SO_LINGER -> false, whtaever(default) => immediately return from close but OS is waiting to handshake complete. time_wait could happen in this case
-SO_LINGER -> true, 0 => immediately return from close, the socket is closed forcefully, with a TCP RST 
-SO_LINGER -> true, x => a close() will block pending the transmission and acknowledgement of all data written to the peer, at which point the socket is closed gracefully. Upon reaching the linger timeout, the socket is closed forcefully, with a TCP RST.
+* SO_LINGER -> false, whtaever(default) => immediately return from close but OS is waiting to handshake complete. time_wait could happen in this case
+* SO_LINGER -> true, 0 => immediately return from close, the socket is closed forcefully, with a TCP RST 
+* SO_LINGER -> true, x => a close() will block pending the transmission and acknowledgement of all data written to the peer, at which point the socket is closed gracefully. Upon reaching the linger timeout, the socket is closed forcefully, with a TCP RST.
 
 
 
